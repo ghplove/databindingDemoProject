@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.viewmodelActivityButton.addClickAction {
-            routeToActivity(ObservableFieldActivity::class.java)
+            routeToActivity(ViewModelActivity::class.java)
         }
     }
 }

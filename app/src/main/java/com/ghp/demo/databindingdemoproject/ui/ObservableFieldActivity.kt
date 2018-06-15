@@ -10,7 +10,7 @@ import com.ghp.demo.databindingdemoproject.data.ObservableFieldProfile
 import com.ghp.demo.databindingdemoproject.databinding.ActivityObservableFieldBinding
 
 class ObservableFieldActivity : AppCompatActivity() {
-    private val observableFieldProfile = ObservableFieldProfile("ghp", "teset", ObservableInt(8))
+    private val observableFieldProfile = ObservableFieldProfile("ObservableFieldTest", "test", ObservableInt(8))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
