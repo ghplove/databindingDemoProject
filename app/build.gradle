@@ -7,7 +7,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.ghp.demo.databindingdemoproject"
-        minSdkVersion 19
+        minSdkVersion 25
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -32,8 +32,21 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.0.2'
     implementation 'com.android.support:support-v4:27.0.2'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    // For ViewModelActivity
-    implementation "android.arch.lifecycle:extensions:1.1.0"
+
+    // For ViewModelActivity   & ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+// alternatively - Lifecycles only (no ViewModel or LiveData).
+    //     Support library depends on this lightweight import
+    implementation "android.arch.lifecycle:runtime:$lifecycle_version"
+
+    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
+    // alternately - if using Java8, use the following instead of compiler
+    implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
+
+    //For Room
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+
 
     testImplementation 'junit:junit:4.12'
 

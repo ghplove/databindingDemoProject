@@ -2,6 +2,8 @@
 
 buildscript {
     ext.kotlin_version = '1.2.0'
+    ext.lifecycle_version = '1.1.1'
+    ext.room_version = '1.1.1'
 
     repositories {
         google()
@@ -20,6 +22,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://maven.google.com' }
     }
 }
 
