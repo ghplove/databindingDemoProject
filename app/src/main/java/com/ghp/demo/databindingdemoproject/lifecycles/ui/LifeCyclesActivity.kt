@@ -1,9 +1,11 @@
 package com.ghp.demo.lifecycles.ui
 
+import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.ghp.demo.databindingdemoproject.R
+import com.ghp.demo.databindingdemoproject.databinding.ActivityLifeCyclesBinding
 import com.ghp.demo.lifecycles.interfaces.IPresenter
 import com.ghp.demo.lifecycles.interfaces.MainPresenter
 
@@ -13,9 +15,13 @@ class LifeCyclesActivity : AppCompatActivity() {
     lateinit var mPresenter: IPresenter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_life_cycles)
+//        setContentView(R.layout.activity_life_cycles)
+        val binding: ActivityLifeCyclesBinding = DataBindingUtil.setContentView(this, R.layout.activity_life_cycles)
         mPresenter = MainPresenter(this)
         lifecycle.addObserver(mPresenter)
+
+        binding.testTextview.lifecycle = lifecycle
+        lifecycle.addObserver(binding.testTextview)
     }
 
     override fun onStart() {
