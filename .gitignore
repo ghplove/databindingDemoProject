@@ -1,4 +1,5 @@
 *.iml
+*/*.iml
 .gradle
 /local.properties
 /.idea/libraries
@@ -8,3 +9,37 @@
 /build
 /captures
 .externalNativeBuild
+
+# Intellij IDEA (see https://intellij-support.jetbrains.com/entries/23393067)
+.idea
+.idea/modules.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/datasources.xml
+.idea/dataSources.ids
+.idea/
+
+# built native files
+#*.o
+#*.so
+
+# built application files
+*.apk
+*.ap_
+
+# Ignore gradle files
+.gradle/
+build/
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# Local configuration file (sdk path, etc)
+local.properties
+#gradle configuration file (http proxy, etc)
+#gradle.properties
+
