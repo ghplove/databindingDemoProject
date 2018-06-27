@@ -6,23 +6,29 @@ buildscript {
     ext.room_version = '1.1.1'
 
     repositories {
-        google()
+        mavenCentral()
         jcenter()
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
+plugins {
+    id "me.tatarka.retrolambda" version "3.7.0"
+}
+
 allprojects {
     repositories {
+        mavenLocal()
         google()
         jcenter()
         maven { url 'https://maven.google.com' }
+        maven { url 'https://jitpack.io' }
     }
 }
 

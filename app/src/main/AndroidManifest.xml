@@ -16,10 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity"></activity>
+        <activity android:name=".ui.MainActivity" />
         <activity android:name="com.ghp.demo.lifecycles.ui.LifeCyclesActivity" />
         <activity android:name=".ui.ObservableFieldActivity" />
-        <activity android:name=".ui.ViewModelActivity"></activity>
+        <activity android:name=".ui.ViewModelActivity" />
+        <activity android:name=".livedata.ui.LiveDataActivity"></activity>
     </application>
 
 </manifest>

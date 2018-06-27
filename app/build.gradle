@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
@@ -12,6 +13,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        jackOptions.enabled = true
 
     }
     buildTypes {
@@ -24,6 +26,14 @@ android {
         enabled true
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    mavenCentral()
 }
 
 dependencies {
@@ -56,6 +66,7 @@ dependencies {
     kapt 'com.android.databinding:compiler:3.0.1'
 
     implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    retrolambdaConfig 'net.orfjackal.retrolambda:retrolambda:+'
 }
 repositories {
     mavenCentral()
