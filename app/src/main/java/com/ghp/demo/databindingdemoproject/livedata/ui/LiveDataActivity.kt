@@ -8,7 +8,8 @@ import android.support.v7.app.AppCompatActivity
 import com.ghp.demo.databindingdemoproject.R
 import com.ghp.demo.databindingdemoproject.databinding.ActivityLiveDataBinding
 import com.ghp.demo.databindingdemoproject.extension.addClickAction
-import com.ghp.demo.databindingdemoproject.livedata.NameViewModel
+import com.ghp.demo.databindingdemoproject.livedata.data.TestLiveData
+import com.ghp.demo.databindingdemoproject.livedata.viewmodel.NameViewModel
 
 
 class LiveDataActivity : AppCompatActivity() {
@@ -47,5 +48,10 @@ class LiveDataActivity : AppCompatActivity() {
             }
             mNameViewModel.mNameListData?.value = nameList
         }
+
+        TestLiveData().getInstance(this)?.observe(this, Observer {
+            wifiLevel ->
+            binding.testLivedataText.text = wifiLevel.toString()
+        })
     }
 }

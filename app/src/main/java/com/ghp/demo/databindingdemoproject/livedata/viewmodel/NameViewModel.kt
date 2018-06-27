@@ -1,4 +1,4 @@
-package com.ghp.demo.databindingdemoproject.livedata
+package com.ghp.demo.databindingdemoproject.livedata.viewmodel
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
