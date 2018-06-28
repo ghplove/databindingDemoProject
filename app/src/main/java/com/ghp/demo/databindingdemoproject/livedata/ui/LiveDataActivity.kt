@@ -24,6 +24,8 @@ class LiveDataActivity : AppCompatActivity() {
         mNameViewModel = ViewModelProviders.of(this).get(NameViewModel::class.java)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_live_data)
 
+        binding.viewModel = mNameViewModel//LiveData数据binding不到值
+
         mNameViewModel.mCurrentName.observe(this, Observer { name: String? ->
             binding.nameText.text = name ?: ""
         })

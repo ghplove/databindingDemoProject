@@ -41,5 +41,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="parent"/>
+        <Button
+            android:id="@+id/click_name_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> viewModel.onClickName()}"
+            android:text="click change name"
+            app:layout_constraintBottom_toTopOf="@+id/click_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"/>
     </android.support.constraint.ConstraintLayout>
 </layout>

@@ -3,7 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
-    <data/>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ghp.demo.databindingdemoproject.livedata.viewmodel.NameViewModel"/>
+    </data>
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,7 +19,9 @@
             <TextView
                 android:id="@+id/name_text"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.mCurrentName.value}"
+                />
 
             <TextView
                 android:id="@+id/name_list_text"
