@@ -1,4 +1,4 @@
-package com.ghp.demo.databindingdemoproject.util
+package com.ghp.demo.databindingdemoproject.binding.viewmodel
 
 import android.arch.lifecycle.ViewModel
 import android.databinding.Bindable

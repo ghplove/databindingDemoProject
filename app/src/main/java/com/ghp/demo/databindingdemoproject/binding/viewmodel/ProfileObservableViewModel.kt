@@ -1,9 +1,8 @@
-package com.ghp.demo.databindingdemoproject.data
+package com.ghp.demo.databindingdemoproject.binding.viewmodel
 
 import android.databinding.ObservableField
 import android.databinding.ObservableInt
-import com.ghp.demo.databindingdemoproject.BR
-import com.ghp.demo.databindingdemoproject.util.ObservableViewModel
+import com.ghp.demo.databindingdemoproject.binding.viewmodel.ObservableViewModel
 
 class ProfileObservableViewModel : ObservableViewModel() {
     val name = ObservableField("viewModelTest")

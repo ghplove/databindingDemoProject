@@ -1,4 +1,4 @@
-package com.ghp.demo.databindingdemoproject.ui
+package com.ghp.demo.databindingdemoproject.binding.ui
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle

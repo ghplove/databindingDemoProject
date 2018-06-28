@@ -5,12 +5,12 @@
     <data>
         <variable
             name="viewModel"
-            type="com.ghp.demo.databindingdemoproject.data.ProfileObservableViewModel"/>
+            type="com.ghp.demo.databindingdemoproject.binding.viewmodel.ProfileObservableViewModel"/>
     </data>
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.ViewModelActivity">
+        tools:context=".binding.ui.ViewModelActivity">
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"

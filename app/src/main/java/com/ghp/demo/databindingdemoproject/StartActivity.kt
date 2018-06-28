@@ -7,7 +7,7 @@ import com.ghp.demo.databindingdemoproject.databinding.ActivityStartBinding
 import com.ghp.demo.databindingdemoproject.extension.addClickAction
 import com.ghp.demo.databindingdemoproject.extension.routeToActivity
 import com.ghp.demo.databindingdemoproject.livedata.ui.LiveDataActivity
-import com.ghp.demo.databindingdemoproject.ui.MainActivity
+import com.ghp.demo.databindingdemoproject.binding.ui.MainActivity
 import com.ghp.demo.lifecycles.ui.LifeCyclesActivity
 
 class StartActivity : AppCompatActivity() {

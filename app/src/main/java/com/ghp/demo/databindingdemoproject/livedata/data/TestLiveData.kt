@@ -28,11 +28,21 @@ class TestLiveData() : LiveData<String>() {
         return shared
     }
 
+    /**
+     * 当这个方法被调用时，
+     * 表示LiveData的观察者数量从0变为了1，
+     * 这时就我们的位置监听来说，就应该注册我们的时间监听了。
+     */
     override fun onActive() {
         super.onActive()
         registerReceiver()
     }
 
+    /**
+     * 这个方法被调用时，
+     * 表示LiveData的观察者数量变为了0，
+     * 既然没有了观察者，也就没有理由再做监听，此时我们就应该将位置监听移除。
+     */
     override fun onInactive() {
         super.onInactive()
         unregisterReceiver()

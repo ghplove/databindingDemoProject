@@ -6,12 +6,12 @@
         <import type="com.ghp.demo.databindingdemoproject.R"/>
         <variable
             name="user"
-            type="com.ghp.demo.databindingdemoproject.data.ObservableFieldProfile"/>
+            type="com.ghp.demo.databindingdemoproject.binding.data.ObservableFieldProfile"/>
     </data>
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.ObservableFieldActivity">
+        tools:context=".binding.ui.ObservableFieldActivity">
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"

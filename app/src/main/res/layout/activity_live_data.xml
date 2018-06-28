@@ -46,6 +46,22 @@
                 android:layout_marginTop="10dp"
                 android:text="wifiLevel"
                 />
+
+            <TextView
+                android:id="@+id/transformations_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="transformations"
+                />
+
+            <Button
+                android:id="@+id/transformations_livedata_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Transformations LiveData"
+                />
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>

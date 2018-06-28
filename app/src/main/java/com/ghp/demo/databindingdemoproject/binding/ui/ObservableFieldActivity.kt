@@ -1,4 +1,4 @@
-package com.ghp.demo.databindingdemoproject.ui
+package com.ghp.demo.databindingdemoproject.binding.ui
 
 import android.databinding.DataBindingUtil
 import android.databinding.ObservableInt
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.ghp.demo.databindingdemoproject.R
-import com.ghp.demo.databindingdemoproject.data.ObservableFieldProfile
+import com.ghp.demo.databindingdemoproject.binding.data.ObservableFieldProfile
 import com.ghp.demo.databindingdemoproject.databinding.ActivityObservableFieldBinding
 
 class ObservableFieldActivity : AppCompatActivity() {

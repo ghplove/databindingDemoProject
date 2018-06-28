@@ -1,4 +1,4 @@
-package com.ghp.demo.databindingdemoproject.data
+package com.ghp.demo.databindingdemoproject.binding.data
 
 import android.databinding.ObservableInt
 
