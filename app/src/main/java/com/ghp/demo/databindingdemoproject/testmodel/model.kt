@@ -6,3 +6,7 @@ class UserModel {
     var userAdress: String? = null
 }
 
+class BookModel {
+    var bookName: String? = null
+    var bookDes: String? = null
+}
