@@ -13,4 +13,5 @@
     <string name="observableactivity_activity_label_text">Uses ObservableFields to automatically refresh the UI and showcases common bad practices</string>
     <string name="viewmodel_activity_label_text">Uses a ViewModel to hold data and handle user actions, using better alternatives</string>
     <string name="see_readme">See README.md for details</string>
+    <string name="nameFormat">%s, %s</string>
 </resources>
