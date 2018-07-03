@@ -4,9 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <import type="com.ghp.demo.databindingdemoproject.R"/>
+        <import type="android.view.View"/>
         <variable
             name="user"
             type="com.ghp.demo.databindingdemoproject.binding.data.ObservableFieldProfile"/>
+        <variable
+            name="presenter"
+            type="com.ghp.demo.databindingdemoproject.binding.ui.ObservableFieldActivity.Presenter"/>
+
+        <variable
+            name="showImage"
+            type="boolean"/>
     </data>
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,20 +41,24 @@
             android:id="@+id/click_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp"
-            android:onClick="onClick"
+            android:onClick="@{presenter.onClick}"
             android:text="click"
-            app:layout_constraintBottom_toTopOf="@+id/name"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/like"/>
         <ImageView
+            android:id="@+id/img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="@{showImage ? View.VISIBLE : View.GONE}"
+            app:imageUrl="@{user.userPhotoUrl}"
+            app:placeholder="@{@drawable/ic_launcher_background}"
+            app:layout_constraintTop_toBottomOf="@+id/click_button"/>
+        <CheckBox
+            android:id="@+id/showimg_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:imageUrl="@{user.userPhotoUrl}"
-            app:placeholder="@{@drawable/ic_launcher_background}"/>
+            android:onCheckedChanged="@{presenter.onCheckChanged}"
+            android:text="showImage"
+            app:layout_constraintTop_toBottomOf="@+id/img"/>
     </android.support.constraint.ConstraintLayout>
 </layout>
 

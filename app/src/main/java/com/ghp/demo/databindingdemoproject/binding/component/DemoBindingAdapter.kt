@@ -6,6 +6,9 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 
 object DemoBindingAdapter {
+    /**
+     * BindingAdapter必须是static类型
+     */
     @BindingAdapter("imageUrl", "placeholder")
     @JvmStatic fun loadImageFromUrl(view: ImageView,
                          url: String,
