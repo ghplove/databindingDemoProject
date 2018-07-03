@@ -10,12 +10,19 @@ import com.ghp.demo.databindingdemoproject.testmodel.BookModel
 import android.widget.TextView
 import android.view.LayoutInflater
 import com.ghp.demo.databindingdemoproject.R
+import com.ghp.demo.databindingdemoproject.extension.addClickAction
 
 
 class RecyclerBaseAdapter : RecyclerView.Adapter<BindingViewHolder<*>> {
     private val mLayoutInflater: LayoutInflater
 
     var mBookList: MutableList<BookModel> = mutableListOf()
+
+    var mListener: OnItemClickListener? = null
+
+    interface OnItemClickListener {
+        fun onItemClick(bookModel: BookModel)
+    }
 
     constructor(context: Context){
         mLayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -34,12 +41,22 @@ class RecyclerBaseAdapter : RecyclerView.Adapter<BindingViewHolder<*>> {
         return mBookList.size
     }
 
+    /**
+     * 由于同一个adapter未必只有一种ViewHolder，
+     * 可能有好几种View type，所以在onBindViewHolder中，
+     * 我们只能获取基类的ViewHolder类型，也就是BindingViewHolder，
+     * 所以无法去做具体的set操作，如setEmployee。
+     * 这时候就可以使用setVariable接口，然后通过BR来指定variable的name。
+     */
     override fun onBindViewHolder(holder: BindingViewHolder<*>?, position: Int) {
         var bookModel = mBookList[position]
 //        holder?.bookDes?.text = bookModel.bookDes
 //        holder?.bookDes?.text = bookModel.bookDes
         holder?.binding?.setVariable(com.ghp.demo.databindingdemoproject.BR.item, bookModel)
         holder?.binding?.executePendingBindings()
+        holder?.itemView?.addClickAction {
+            mListener?.onItemClick(bookModel)
+        }
 
     }
 
@@ -57,6 +74,7 @@ class RecyclerBaseAdapter : RecyclerView.Adapter<BindingViewHolder<*>> {
     fun addAll(mBookList: MutableList<BookModel>){
         this.mBookList.clear()
         this.mBookList.addAll(mBookList)
+        notifyDataSetChanged()
     }
 
 }

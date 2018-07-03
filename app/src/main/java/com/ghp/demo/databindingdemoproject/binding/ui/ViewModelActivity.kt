@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.widget.Toast
 import com.ghp.demo.databindingdemoproject.R
 import com.ghp.demo.databindingdemoproject.binding.viewmodel.ProfileObservableViewModel
 import com.ghp.demo.databindingdemoproject.databinding.ActivityViewModelBinding
@@ -27,6 +28,11 @@ class ViewModelActivity : AppCompatActivity() {
         recyclerBaseAdapter = RecyclerBaseAdapter(this)
         binding.recyclerView.adapter = recyclerBaseAdapter
         recyclerBaseAdapter?.addAll(getBook())
+        recyclerBaseAdapter?.mListener = object : RecyclerBaseAdapter.OnItemClickListener{
+            override fun onItemClick(bookModel: BookModel) {
+                Toast.makeText(this@ViewModelActivity, bookModel.bookName, Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     fun getBook(): MutableList<BookModel> {
