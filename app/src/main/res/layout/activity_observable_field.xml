@@ -42,6 +42,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="parent"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:imageUrl="@{user.userPhotoUrl}"
+            app:placeholder="@{@drawable/ic_launcher_background}"/>
     </android.support.constraint.ConstraintLayout>
 </layout>
 

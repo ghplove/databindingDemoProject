@@ -5,5 +5,6 @@ import android.databinding.ObservableInt
 data class ObservableFieldProfile(
         val name: String,
         val lastName: String,
-        val likes: ObservableInt
+        val likes: ObservableInt,
+        val userPhotoUrl: String
 )

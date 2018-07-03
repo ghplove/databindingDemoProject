@@ -10,7 +10,7 @@ import com.ghp.demo.databindingdemoproject.binding.data.ObservableFieldProfile
 import com.ghp.demo.databindingdemoproject.databinding.ActivityObservableFieldBinding
 
 class ObservableFieldActivity : AppCompatActivity() {
-    private val observableFieldProfile = ObservableFieldProfile("ObservableFieldTest", "test", ObservableInt(8))
+    private val observableFieldProfile = ObservableFieldProfile("ObservableFieldTest", "test", ObservableInt(8),"https://avatars2.githubusercontent.com/u/1106500?v=3&s=460")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
