@@ -3,6 +3,7 @@ package com.ghp.demo.databindingdemoproject.binding.viewmodel
 import android.databinding.ObservableField
 import android.databinding.ObservableInt
 import com.ghp.demo.databindingdemoproject.testmodel.BindalbeTestModel
+import com.ghp.demo.databindingdemoproject.testmodel.UserModel
 
 class ProfileObservableViewModel : BaseObservableViewModel() {
     val name = ObservableField("viewModelTest")
@@ -10,6 +11,17 @@ class ProfileObservableViewModel : BaseObservableViewModel() {
     val likes = ObservableInt(0)
 
     val bindalbeTestModel = BindalbeTestModel()
+
+    var user = ObservableField<UserModel>()
+
+    /**
+     * ObservableField可以包裹变量非Observable的model
+     * model初始化后，更改值，必须要notifyChange刷新UI
+     */
+    fun onclickObservableFieldUser() {
+        user.get().userName = "ghp"
+        user.notifyChange()
+    }
 
     fun onClick() {
         likes.set(likes.get() + 1)
@@ -26,4 +38,5 @@ class ProfileObservableViewModel : BaseObservableViewModel() {
     fun onClickBindalbeTest() {
         bindalbeTestModel.testStr = "bindalbeTestModel"
     }
+
 }

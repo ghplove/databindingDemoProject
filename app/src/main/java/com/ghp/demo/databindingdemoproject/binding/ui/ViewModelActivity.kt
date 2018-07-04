@@ -4,12 +4,10 @@ import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.widget.Toast
 import com.ghp.demo.databindingdemoproject.R
 import com.ghp.demo.databindingdemoproject.binding.viewmodel.ProfileObservableViewModel
 import com.ghp.demo.databindingdemoproject.databinding.ActivityViewModelBinding
-import com.ghp.demo.databindingdemoproject.testmodel.BookModel
+import com.ghp.demo.databindingdemoproject.testmodel.UserModel
 
 class ViewModelActivity : AppCompatActivity() {
 
@@ -24,5 +22,6 @@ class ViewModelActivity : AppCompatActivity() {
 
         binding.viewModel = viewModel
 
+        viewModel.user.set(UserModel())
     }
 }
