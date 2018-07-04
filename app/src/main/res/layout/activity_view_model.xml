@@ -55,12 +55,22 @@
                 android:onClick="@{() -> viewModel.onClickName()}"
                 android:text="click change name"
                 />
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:id="@+id/bindalbe_test_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.bindalbeTestModel.testStr}"
+                />
+            <Button
+                android:id="@+id/bindalbe_test_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:onClick="@{() -> viewModel.onClickBindalbeTest()}"
+                android:text="click bindalbe test"
+                />
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>
 </layout>

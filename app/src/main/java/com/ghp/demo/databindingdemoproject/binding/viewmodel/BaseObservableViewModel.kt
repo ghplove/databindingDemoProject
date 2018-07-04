@@ -8,7 +8,7 @@ import android.databinding.PropertyChangeRegistry
 /**
  * A ViewModel that is also an Observable, to be used with Data Binding.
  */
-open class ObservableViewModel : ViewModel(), Observable {
+open class BaseObservableViewModel : ViewModel(), Observable {
     private val callbacks: PropertyChangeRegistry = PropertyChangeRegistry()
 
     override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {

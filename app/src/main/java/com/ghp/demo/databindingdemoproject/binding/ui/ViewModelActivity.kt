@@ -13,7 +13,7 @@ import com.ghp.demo.databindingdemoproject.testmodel.BookModel
 
 class ViewModelActivity : AppCompatActivity() {
 
-    var recyclerBaseAdapter: RecyclerBaseAdapter? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_view_model)
@@ -24,25 +24,5 @@ class ViewModelActivity : AppCompatActivity() {
 
         binding.viewModel = viewModel
 
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerBaseAdapter = RecyclerBaseAdapter(this)
-        binding.recyclerView.adapter = recyclerBaseAdapter
-        recyclerBaseAdapter?.addAll(getBook())
-        recyclerBaseAdapter?.mListener = object : RecyclerBaseAdapter.OnItemClickListener{
-            override fun onItemClick(bookModel: BookModel) {
-                Toast.makeText(this@ViewModelActivity, bookModel.bookName, Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-
-    fun getBook(): MutableList<BookModel> {
-        var bookList: MutableList<BookModel> = mutableListOf()
-        for(position in 1..10){
-            var bookModel = BookModel()
-            bookModel.bookDes = "bookDes${position}"
-            bookModel.bookName = "bookName${position}"
-            bookList.add(bookModel)
-        }
-        return bookList
     }
 }

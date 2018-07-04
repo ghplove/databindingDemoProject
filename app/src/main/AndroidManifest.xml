@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ghp.demo.databindingdemoproject">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,11 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ghp.demo.databindingdemoproject.binding.ui.MainActivity" />
+        <activity android:name=".binding.ui.MainActivity" />
         <activity android:name="com.ghp.demo.lifecycles.ui.LifeCyclesActivity" />
-        <activity android:name="com.ghp.demo.databindingdemoproject.binding.ui.ObservableFieldActivity" />
-        <activity android:name="com.ghp.demo.databindingdemoproject.binding.ui.ViewModelActivity" />
-        <activity android:name=".livedata.ui.LiveDataActivity"></activity>
+        <activity android:name=".binding.ui.ObservableFieldActivity" />
+        <activity android:name=".binding.ui.ViewModelActivity" />
+        <activity android:name=".livedata.ui.LiveDataActivity" />
+        <activity android:name=".binding.ui.RecyclerViewActivity"></activity>
     </application>
 
 </manifest>

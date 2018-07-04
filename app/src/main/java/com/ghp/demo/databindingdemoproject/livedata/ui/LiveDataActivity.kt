@@ -24,7 +24,7 @@ class LiveDataActivity : AppCompatActivity() {
         mNameViewModel = ViewModelProviders.of(this).get(NameViewModel::class.java)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_live_data)
 
-        binding.viewModel = mNameViewModel//LiveData数据binding不到值
+        binding.viewModel = mNameViewModel//nameText对LiveData数据binding不到值
 
         mNameViewModel.mCurrentName.observe(this, Observer { name: String? ->
             binding.nameText.text = name ?: ""
@@ -62,7 +62,7 @@ class LiveDataActivity : AppCompatActivity() {
 
         /**
          * 需要在LiveData将变化的数据通知给观察者前，改变数据的类型
-         * 直接给source返回为null
+         * 直接赋值，source返回为null
          */
         var userNameLiveData: LiveData<String> = Transformations.map<UserModel, String>(userLiveData, { user ->
             user.userName

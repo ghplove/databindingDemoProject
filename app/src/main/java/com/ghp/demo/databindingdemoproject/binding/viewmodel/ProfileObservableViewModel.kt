@@ -2,11 +2,14 @@ package com.ghp.demo.databindingdemoproject.binding.viewmodel
 
 import android.databinding.ObservableField
 import android.databinding.ObservableInt
+import com.ghp.demo.databindingdemoproject.testmodel.BindalbeTestModel
 
-class ProfileObservableViewModel : ObservableViewModel() {
+class ProfileObservableViewModel : BaseObservableViewModel() {
     val name = ObservableField("viewModelTest")
     val lastName = ObservableField("test")
     val likes = ObservableInt(0)
+
+    val bindalbeTestModel = BindalbeTestModel()
 
     fun onClick() {
         likes.set(likes.get() + 1)
@@ -20,4 +23,7 @@ class ProfileObservableViewModel : ObservableViewModel() {
         name.set("ghp")
     }
 
+    fun onClickBindalbeTest() {
+        bindalbeTestModel.testStr = "bindalbeTestModel"
+    }
 }

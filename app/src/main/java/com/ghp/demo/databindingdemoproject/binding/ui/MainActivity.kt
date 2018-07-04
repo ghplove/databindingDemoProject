@@ -23,5 +23,9 @@ class MainActivity : AppCompatActivity() {
         binding.viewmodelActivityButton.addClickAction {
             routeToActivity(ViewModelActivity::class.java)
         }
+
+        binding.recyclerViewActivityButton.addClickAction {
+            routeToActivity(RecyclerViewActivity::class.java)
+        }
     }
 }
