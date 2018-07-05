@@ -6,6 +6,9 @@
         <variable
             name="viewModel"
             type="com.ghp.demo.databindingdemoproject.binding.viewmodel.ProfileObservableViewModel"/>
+
+        <import type="android.graphics.Bitmap"/>
+
     </data>
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -87,6 +90,11 @@
                 android:onClick="@{() -> viewModel.onclickObservableFieldUser()}"
                 android:text="click onclickObservableFieldUser test"
                 />
+            <View
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:background="@{viewModel.isRed()? @drawable/ic_launcher_background:@drawable/ic_launcher_background}" />
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>
 </layout>

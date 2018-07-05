@@ -1,5 +1,6 @@
 package com.ghp.demo.databindingdemoproject.binding.viewmodel
 
+import android.databinding.ObservableBoolean
 import android.databinding.ObservableField
 import android.databinding.ObservableInt
 import com.ghp.demo.databindingdemoproject.testmodel.BindalbeTestModel
@@ -9,6 +10,7 @@ class ProfileObservableViewModel : BaseObservableViewModel() {
     val name = ObservableField("viewModelTest")
     val lastName = ObservableField("test")
     val likes = ObservableInt(0)
+    val isRed = ObservableBoolean(false)
 
     val bindalbeTestModel = BindalbeTestModel()
 

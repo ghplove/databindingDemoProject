@@ -1,9 +1,13 @@
 package com.ghp.demo.databindingdemoproject.binding.component
 
 import android.databinding.BindingAdapter
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
+import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
+import com.ghp.demo.databindingdemoproject.utils.CommonUtils
 
 object DemoBindingAdapter {
     /**
@@ -19,4 +23,9 @@ object DemoBindingAdapter {
                 .into(view)
     }
 
+    @BindingAdapter("android:background")
+    @JvmStatic fun backgroundBtm(view: View, drawable: Drawable) {
+        var bm: Bitmap = CommonUtils.drawableToBitmap(drawable)
+        view.background = BitmapDrawable(CommonUtils.roundCrop(bm))
+    }
 }
