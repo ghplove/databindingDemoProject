@@ -19,6 +19,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
+            <!--双向绑定的写法： @={} -->
+            <!--自定义view的话，需要通过InverseBindingAdapter注解类实现-->
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="@={viewModel.name}"
+                />
+            <com.ghp.demo.databindingdemoproject.view.TestEditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="@={viewModel.name}"/>
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
@@ -44,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:onClick="@{() -> viewModel.onClick()}"
                 android:text="click"
                 />
@@ -54,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:onClick="@{() -> viewModel.onClickName()}"
                 android:text="click change name"
                 />
@@ -70,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:onClick="@{() -> viewModel.onClickBindalbeTest()}"
                 android:text="click bindalbe test"
                 />
@@ -86,14 +97,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:onClick="@{() -> viewModel.onclickObservableFieldUser()}"
                 android:text="click onclickObservableFieldUser test"
                 />
             <View
                 android:layout_width="150dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
                 android:background="@{viewModel.isRed()? @drawable/ic_launcher_background:@drawable/ic_launcher_background}" />
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>
