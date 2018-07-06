@@ -14,7 +14,8 @@ object DemoBindingAdapter {
      * BindingAdapter必须是static类型
      */
     @BindingAdapter("imageUrl", "placeholder")
-    @JvmStatic fun loadImageFromUrl(view: ImageView,
+    @JvmStatic
+    fun loadImageFromUrl(view: ImageView,
                          url: String,
                          drawable: Drawable) {
         Glide.with(view.context)
@@ -24,8 +25,11 @@ object DemoBindingAdapter {
     }
 
     @BindingAdapter("android:background")
-    @JvmStatic fun backgroundBtm(view: View, drawable: Drawable) {
+    @JvmStatic
+    fun backgroundBtm(view: View, drawable: Drawable) {
         var bm: Bitmap = CommonUtils.drawableToBitmap(drawable)
         view.background = BitmapDrawable(CommonUtils.roundCrop(bm))
     }
+
+
 }
