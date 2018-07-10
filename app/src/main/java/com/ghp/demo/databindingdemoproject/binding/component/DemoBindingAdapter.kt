@@ -12,6 +12,7 @@ import com.ghp.demo.databindingdemoproject.utils.CommonUtils
 object DemoBindingAdapter {
     /**
      * BindingAdapter必须是static类型
+     * requireAll 默认是true
      */
     @BindingAdapter("imageUrl", "placeholder")
     @JvmStatic
@@ -30,6 +31,5 @@ object DemoBindingAdapter {
         var bm: Bitmap = CommonUtils.drawableToBitmap(drawable)
         view.background = BitmapDrawable(CommonUtils.roundCrop(bm))
     }
-
 
 }

@@ -4,6 +4,7 @@ import android.app.Activity
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.widget.Toast
 import com.ghp.demo.databindingdemoproject.R
 import com.ghp.demo.databindingdemoproject.databinding.ActivityRecyclerViewBinding
@@ -20,15 +21,26 @@ class RecyclerViewActivity : Activity() {
         recyclerViewAdapter = RecyclerViewAdapter(this)
         binding.recyclerView.adapter = recyclerViewAdapter
         recyclerViewAdapter?.addAll(getBook())
-        recyclerViewAdapter?.mListener = object : RecyclerViewAdapter.OnItemClickListener{
-            override fun onItemClick(bookModel: BookModel) {
-                Toast.makeText(this@RecyclerViewActivity, bookModel.bookName, Toast.LENGTH_SHORT).show()
-            }
-        }
+
+        binding.presenter = Presenter()
+
+//        recyclerViewAdapter?.mListener = object : BaseViewAdapter.OnItemClickListener<Any> {
+//            override fun onItemClick(adapter: BaseViewAdapter, model: Any, position: Int) {
+//                Toast.makeText(this@RecyclerViewActivity, (model as BookModel).bookName, Toast.LENGTH_SHORT).show()
+//            }
+//        }
     }
 
-    fun getBook(): MutableList<BookModel> {
-        var bookList: MutableList<BookModel> = mutableListOf()
+    class Presenter {
+        fun onClick(adapter: BaseViewAdapter, model: kotlin.Any, position: Int) {
+            Log.i("onItemClickListener", "Toast")
+            Toast.makeText(adapter.mContext, (model as BookModel).bookName, Toast.LENGTH_SHORT).show()
+        }
+
+    }
+
+    fun getBook(): MutableList<Any> {
+        var bookList: MutableList<Any> = mutableListOf()
         for(position in 1..10){
             var bookModel = BookModel()
             bookModel.bookDes = "bookDes${position}"

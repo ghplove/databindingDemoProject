@@ -14,9 +14,9 @@ import android.widget.Toast
 import com.ghp.demo.databindingdemoproject.R
 
 /**
- * BindingMethods与BindingMethod定义了一个自己声明的属性：testToast
+ * BindingMethods与BindingMethod定义了一个自己声明的属性：bindingMethodToast
  *
- * 该属性与TestEditText里的showTestToast绑定
+ * 该属性与TestEditText里的showBindingMethodToast绑定
  */
 @BindingMethods(BindingMethod(type = EditText::class, attribute = "bindingMethodToast", method = "showBindingMethodToast"))
 
