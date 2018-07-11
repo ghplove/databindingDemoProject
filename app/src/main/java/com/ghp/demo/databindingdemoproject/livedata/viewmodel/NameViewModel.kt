@@ -6,7 +6,6 @@ import android.arch.lifecycle.ViewModel
 import com.ghp.demo.databindingdemoproject.testmodel.UserModel
 
 class NameViewModel : ViewModel() {
-    var mCurrentName: MutableLiveData<String> = MutableLiveData()
 
     var mNameLiveData: MutableLiveData<List<String>>? = null
         set(value) {

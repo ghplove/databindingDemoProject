@@ -20,7 +20,6 @@
                 android:id="@+id/name_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{viewModel.mCurrentName.value}"
                 />
 
             <TextView
@@ -68,6 +67,14 @@
                 android:layout_marginTop="10dp"
                 android:text="Transformations LiveData"
                 />
+            <Button
+                android:id="@+id/test_livedata_share_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Go Next LiveData Page"
+                />
+
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>

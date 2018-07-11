@@ -12,6 +12,8 @@ import com.ghp.demo.databindingdemoproject.livedata.viewmodel.NameViewModel
 import com.ghp.demo.databindingdemoproject.testmodel.UserModel
 import android.arch.lifecycle.Transformations
 import android.arch.lifecycle.LiveData
+import com.ghp.demo.databindingdemoproject.extension.routeToActivity
+import com.ghp.demo.databindingdemoproject.livedata.service.LiveDataService
 
 
 class LiveDataActivity : AppCompatActivity() {
@@ -26,9 +28,12 @@ class LiveDataActivity : AppCompatActivity() {
 
         binding.viewModel = mNameViewModel//nameText对LiveData数据binding不到值
 
-        mNameViewModel.mCurrentName.observe(this, Observer { name: String? ->
+//        LiveDataService.shared.mCurrentName.observe(this, Observer { name: String? ->
+//            binding.nameText.text = name ?: ""
+//        })
+        LiveDataService.shared.mCurrentName.observeForever {name: String? ->
             binding.nameText.text = name ?: ""
-        })
+        }
 
         mNameViewModel.mNameLiveData!!.observe(this, Observer { nameList: List<String>? ->
             nameList?.apply {
@@ -41,7 +46,7 @@ class LiveDataActivity : AppCompatActivity() {
         })
 
         binding.nameBtn.addClickAction {
-            mNameViewModel.mCurrentName?.value = "liveData"
+            LiveDataService.shared.mCurrentName?.value = "liveData"
         }
 
         binding.nameListBtn.addClickAction {
@@ -76,7 +81,9 @@ class LiveDataActivity : AppCompatActivity() {
             userLiveData.value = mNameViewModel.getUserLiveData().value
         }
 
-
+        binding.testLivedataShareBtn.addClickAction {
+            routeToActivity(LiveData2Activity::class.java)
+        }
     }
 
 }

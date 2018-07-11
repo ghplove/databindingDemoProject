@@ -49,12 +49,14 @@ class TestLiveData() : LiveData<String>() {
     }
 
     private fun registerReceiver() {
+        Log.d(TAG, "registerReceiver")
         val intentFilter = IntentFilter()
         intentFilter.addAction(WifiManager.RSSI_CHANGED_ACTION)
         mContextWeakReference?.get()?.registerReceiver(mReceiver, intentFilter)
     }
 
     private fun unregisterReceiver() {
+        Log.d(TAG, "unregisterReceiver")
         mContextWeakReference?.get()?.unregisterReceiver(mReceiver)
     }
 
