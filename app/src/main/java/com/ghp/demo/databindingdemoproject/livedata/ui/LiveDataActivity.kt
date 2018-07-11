@@ -73,6 +73,12 @@ class LiveDataActivity : AppCompatActivity() {
             user.userName
         })
 
+        var userNameLiveData2: LiveData<String> =  Transformations.switchMap<UserModel,String>(userLiveData, { user ->
+            var liveData: MutableLiveData<String> = MutableLiveData()
+            liveData.value = user.userName
+            liveData
+        })
+
         userNameLiveData.observe(this, Observer { userName ->
             mNameViewModel.userNameLiveData?.value = userNameLiveData.value
         })
