@@ -1,10 +1,11 @@
 package com.ghp.demo.databindingdemoproject.binding.data
 
+import android.databinding.ObservableField
 import android.databinding.ObservableInt
 
 data class ObservableFieldProfile(
         val name: String,
         val lastName: String,
         val likes: ObservableInt,
-        val userPhotoUrl: String
+        var userPhotoUrl: ObservableField<String>
 )

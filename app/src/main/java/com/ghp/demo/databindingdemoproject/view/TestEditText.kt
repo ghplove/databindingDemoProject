@@ -17,6 +17,10 @@ import com.ghp.demo.databindingdemoproject.R
  * BindingMethods与BindingMethod定义了一个自己声明的属性：bindingMethodToast
  *
  * 该属性与TestEditText里的showBindingMethodToast绑定
+ *
+ * type：要操作的属性属于哪个View类，类型为class对象，比如：ImageView.class。 注意是View类！
+ * attribute：xml属性，类型为String ，比如：”bindingMethodToast”
+ * method：指定xml属性对应的set方法，类型为String，比如：”showBindingMethodToast”。注意是xml属性对应的set方法！
  */
 @BindingMethods(BindingMethod(type = EditText::class, attribute = "bindingMethodToast", method = "showBindingMethodToast"))
 

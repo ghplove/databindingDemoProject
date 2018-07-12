@@ -1,6 +1,7 @@
 package com.ghp.demo.databindingdemoproject.binding.ui
 
 import android.databinding.DataBindingUtil
+import android.databinding.ObservableField
 import android.databinding.ObservableInt
 import android.databinding.OnRebindCallback
 import android.os.Bundle
@@ -13,7 +14,7 @@ import com.ghp.demo.databindingdemoproject.binding.data.ObservableFieldProfile
 import com.ghp.demo.databindingdemoproject.databinding.ActivityObservableFieldBinding
 
 class ObservableFieldActivity : AppCompatActivity() {
-    val observableFieldProfile = ObservableFieldProfile("ObservableFieldTest", "test", ObservableInt(8),"https://avatars2.githubusercontent.com/u/1106500?v=3&s=460")
+    val observableFieldProfile = ObservableFieldProfile("ObservableFieldTest", "test", ObservableInt(8), ObservableField("https://avatars2.githubusercontent.com/u/1106500?v=3&s=460"))
 
     var binding: ActivityObservableFieldBinding? = null
 
@@ -40,6 +41,13 @@ class ObservableFieldActivity : AppCompatActivity() {
 
         fun onCheckChanged(buttonView: View, isChecked: Boolean) {
             binding?.showImage = isChecked
+        }
+
+        fun onChangeImgUrl(buttonView: View) {
+            observableFieldProfile.userPhotoUrl.set("https://avatars2.githubusercontent.com/u")
+        }
+        fun onChangeImgNullUrl(buttonView: View) {
+            observableFieldProfile.userPhotoUrl.set("")
         }
 
     }
