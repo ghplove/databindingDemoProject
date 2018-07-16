@@ -25,6 +25,17 @@ object DemoBindingAdapter {
                 .into(view)
     }
 
+    @BindingAdapter("imageUrl", "placeholder")
+    @JvmStatic
+    fun loadImageFromUrl2(view: ImageView,
+                         url: String,
+                         drawable: Drawable) {
+        Glide.with(view.context)
+                .load(url)
+                .placeholder(drawable)
+                .into(view)
+    }
+
     @BindingAdapter("android:background")
     @JvmStatic
     fun backgroundBtm(view: View, drawable: Drawable) {

@@ -6,6 +6,13 @@ import android.databinding.ObservableInt
 import com.ghp.demo.databindingdemoproject.testmodel.BindalbeTestModel
 import com.ghp.demo.databindingdemoproject.testmodel.UserModel
 
+/**
+ * Lifecycle提供了一个新类叫做ViewModel，[一个负责为UI准备数据的帮助类]。
+ *
+ * 因为ViewModel的生命周期是和Activity或Fragment分开的，
+ * 所以在ViewModel中绝对不能引用任何View对象或者任何引用了Activity的Context的对象。
+ * 如果ViewModel中需要Application的Context的话，可以继承AndroidViewModel。
+ */
 class ProfileObservableViewModel : BaseObservableViewModel() {
     val name = ObservableField("viewModelTest")
     val lastName = ObservableField("test")
@@ -41,4 +48,13 @@ class ProfileObservableViewModel : BaseObservableViewModel() {
         bindalbeTestModel.testStr = "bindalbeTestModel"
     }
 
+    /**
+     * 当activity被销毁的时候，
+     * Framework会调用ViewModel的onCleared(),
+     * 可以在此方法中做资源的清理。
+     */
+    override fun onCleared() {
+        super.onCleared()
+
+    }
 }

@@ -21,6 +21,8 @@ class LifeCyclesActivity : AppCompatActivity() {
         lifecycle.addObserver(mPresenter)
 
         binding.testTextview.lifecycle = lifecycle
+
+
         lifecycle.addObserver(binding.testTextview)
     }
 
