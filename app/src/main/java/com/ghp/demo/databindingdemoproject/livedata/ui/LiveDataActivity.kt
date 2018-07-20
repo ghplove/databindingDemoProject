@@ -12,6 +12,7 @@ import com.ghp.demo.databindingdemoproject.livedata.viewmodel.NameViewModel
 import com.ghp.demo.databindingdemoproject.testmodel.UserModel
 import android.arch.lifecycle.Transformations
 import android.arch.lifecycle.LiveData
+import android.arch.lifecycle.Observer
 import com.ghp.demo.databindingdemoproject.extension.routeToActivity
 import com.ghp.demo.databindingdemoproject.livedata.service.LiveDataService
 
@@ -23,10 +24,14 @@ class LiveDataActivity : AppCompatActivity() {
     var userLiveData: MutableLiveData<UserModel> = MutableLiveData()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mNameViewModel = ViewModelProviders.of(this).get(NameViewModel::class.java)
+//        mNameViewModel = ViewModelProviders.of(this).get(NameViewModel::class.java)
+        mNameViewModel = ViewModelProviders.of(this, ViewModelProvider.NewInstanceFactory()).get(NameViewModel::class.java)
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_live_data)
 
         binding.viewModel = mNameViewModel//nameText对LiveData数据binding不到值
+        binding.setLifecycleOwner(this)
+
 
 //        LiveDataService.shared.mCurrentName.observe(this, Observer { name: String? ->
 //            binding.nameText.text = name ?: ""
@@ -90,6 +95,7 @@ class LiveDataActivity : AppCompatActivity() {
         binding.testLivedataShareBtn.addClickAction {
             routeToActivity(LiveData2Activity::class.java)
         }
+
     }
 
 }

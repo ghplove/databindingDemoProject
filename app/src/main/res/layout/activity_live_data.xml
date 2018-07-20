@@ -75,6 +75,23 @@
                 android:text="Go Next LiveData Page"
                 />
 
+            <EditText
+                android:id="@+id/livedata_test_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:hint="input"
+                android:text="@={viewModel.mLiveDataTest}"
+                />
+
+            <Button
+                android:id="@+id/change_livedata_test_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Test LiveData binding xml"
+                android:onClick="@{()->viewModel.onClick()}"
+                />
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>

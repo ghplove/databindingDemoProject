@@ -47,7 +47,7 @@ class TestEditText : EditText {
         @JvmStatic
         fun captureTextValue(view: TextView): String {
             var newValue: CharSequence = view.text
-            var oldValue: CharSequence = value.get()
+            var oldValue: CharSequence = value.get()?:""
             if (oldValue == null) {
                 value.set(newValue)
             } else if (newValue != oldValue) {

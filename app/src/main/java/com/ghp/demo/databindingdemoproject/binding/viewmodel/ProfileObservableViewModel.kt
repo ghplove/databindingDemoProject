@@ -28,7 +28,7 @@ class ProfileObservableViewModel : BaseObservableViewModel() {
      * model初始化后，更改值，必须要notifyChange刷新UI
      */
     fun onclickObservableFieldUser() {
-        user.get().userName = "ghp"
+        user.get()?.userName = "ghp"
         user.notifyChange()
     }
 
