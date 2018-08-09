@@ -8,7 +8,7 @@ import com.ghp.demo.databindingdemoproject.databinding.ActivityMainBinding
 import com.ghp.demo.databindingdemoproject.extension.addClickAction
 import com.ghp.demo.databindingdemoproject.extension.routeToActivity
 
-class MainActivity : AppCompatActivity() {
+class BindingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -7,7 +7,7 @@ import com.ghp.demo.databindingdemoproject.databinding.ActivityStartBinding
 import com.ghp.demo.databindingdemoproject.extension.addClickAction
 import com.ghp.demo.databindingdemoproject.extension.routeToActivity
 import com.ghp.demo.databindingdemoproject.livedata.ui.LiveDataActivity
-import com.ghp.demo.databindingdemoproject.binding.ui.MainActivity
+import com.ghp.demo.databindingdemoproject.binding.ui.BindingActivity
 import com.ghp.demo.databindingdemoproject.viewModel.ui.TestViewModelActivity
 import com.ghp.demo.lifecycles.ui.LifeCyclesActivity
 
@@ -19,7 +19,7 @@ class StartActivity : AppCompatActivity() {
         val binding: ActivityStartBinding = DataBindingUtil.setContentView(this, R.layout.activity_start)
 
         binding.goBindingPage.addClickAction {
-            routeToActivity(MainActivity::class.java)
+            routeToActivity(BindingActivity::class.java)
         }
 
         binding.goLifecyclesPage.addClickAction {

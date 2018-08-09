@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
     <data/>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".binding.ui.MainActivity">
+        tools:context=".binding.ui.BindingActivity">
 
 
         <TextView
@@ -40,5 +40,5 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

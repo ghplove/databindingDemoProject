@@ -43,11 +43,4 @@ object DemoBindingAdapter {
                 .into(view)
     }
 
-    @BindingAdapter("android:background")
-    @JvmStatic
-    fun backgroundBtm(view: View, drawable: Drawable) {
-        var bm: Bitmap = CommonUtils.drawableToBitmap(drawable)
-        view.background = BitmapDrawable(CommonUtils.roundCrop(bm))
-    }
-
 }

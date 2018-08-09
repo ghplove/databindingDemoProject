@@ -5,7 +5,7 @@
     >
     <data/>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.ghp.demo.lifecycles.ui.LifeCyclesActivity">
@@ -16,6 +16,6 @@
             android:gravity="center"
             android:textSize="15dp"
             android:textColor="@color/colorPrimary"
-            />
-    </android.support.constraint.ConstraintLayout>
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

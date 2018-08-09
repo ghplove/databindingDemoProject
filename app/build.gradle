@@ -59,7 +59,8 @@ dependencies {
     implementation "android.arch.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$rootProject.kotlinVersion"
-    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+//    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
 
     testImplementation "junit:junit:$rootProject.junitVersion"
 

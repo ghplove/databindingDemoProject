@@ -18,14 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".binding.ui.MainActivity" />
+        <activity android:name=".binding.ui.BindingActivity" />
         <activity android:name="com.ghp.demo.lifecycles.ui.LifeCyclesActivity" />
         <activity android:name=".binding.ui.ObservableFieldActivity" />
         <activity android:name=".binding.ui.ViewModelActivity" />
         <activity android:name=".livedata.ui.LiveDataActivity" />
         <activity android:name=".binding.ui.RecyclerViewActivity" />
         <activity android:name=".livedata.ui.LiveData2Activity" />
-        <activity android:name=".viewModel.ui.TestViewModelActivity"></activity>
+        <activity android:name=".viewModel.ui.TestViewModelActivity" />
+        <activity android:name=".navigation.NavigationMainActivity"></activity>
     </application>
 
 </manifest>
