@@ -19,7 +19,7 @@ class RecyclerViewAdapter : BaseViewAdapter {
      * 所以无法去做具体的set操作，如setEmployee。
      * 这时候就可以使用setVariable接口，然后通过BR来指定variable的name。
      */
-    override fun onBindViewHolder(holder: AdapterBindingViewHolder<*>?, position: Int) {
+    override fun onBindViewHolder(holder: AdapterBindingViewHolder<*>, position: Int) {
         var bookModel: BookModel = mList[position] as BookModel
 
         holder?.binding?.setVariable(com.ghp.demo.databindingdemoproject.BR.item, bookModel)

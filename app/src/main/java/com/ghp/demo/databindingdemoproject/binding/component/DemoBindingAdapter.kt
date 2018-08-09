@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.ghp.demo.databindingdemoproject.utils.CommonUtils
 
 object DemoBindingAdapter {
@@ -19,9 +20,12 @@ object DemoBindingAdapter {
     fun loadImageFromUrl(view: ImageView,
                          url: String,
                          drawable: Drawable) {
+        var requestOptions: RequestOptions= RequestOptions()
+                .placeholder(drawable)
         Glide.with(view.context)
                 .load(url)
-                .placeholder(drawable)
+                .apply(requestOptions)
+//                .placeholder(drawable)
                 .into(view)
     }
 
@@ -30,9 +34,12 @@ object DemoBindingAdapter {
     fun loadImageFromUrl2(view: ImageView,
                          url: String,
                          drawable: Drawable) {
+        var requestOptions: RequestOptions= RequestOptions()
+                .placeholder(drawable)
         Glide.with(view.context)
                 .load(url)
-                .placeholder(drawable)
+                .apply(requestOptions)
+//                .placeholder(drawable)
                 .into(view)
     }
 

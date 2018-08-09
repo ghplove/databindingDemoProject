@@ -22,7 +22,7 @@ abstract class BaseViewAdapter: RecyclerView.Adapter<AdapterBindingViewHolder<*>
         mLayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): AdapterBindingViewHolder<*> {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterBindingViewHolder<*> {
         var binding: ViewDataBinding = DataBindingUtil.inflate(mLayoutInflater, getLayoutResID(), parent, false)
 
         return AdapterBindingViewHolder(binding)

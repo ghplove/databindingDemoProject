@@ -46,7 +46,7 @@ class Test1Fragment : Fragment() {
 
         binding?.replaceFragmentBtn?.addClickAction {
             var testViewModelActivity: TestViewModelActivity = activity as TestViewModelActivity
-            testViewModelActivity.replaceFragment(testViewModelActivity.test2Fragment)
+            testViewModelActivity.replaceFragment(Test2Fragment())
         }
         return binding?.root
     }
