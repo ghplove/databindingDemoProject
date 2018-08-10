@@ -7,9 +7,11 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 
 import com.ghp.demo.databindingdemoproject.R
 import com.ghp.demo.databindingdemoproject.databinding.FragmentMenu2NextBinding
+import com.ghp.demo.databindingdemoproject.extension.addClickAction
 
 /**
  * A simple [Fragment] subclass.
@@ -32,6 +34,15 @@ class Menu2NextFragment : Fragment() {
         var test: String = menu2FragmentArgs.test
         var num: Int = menu2FragmentArgs.num
         binding.testArgs.text = test + "-" + num
+
+        binding.btnBackMenu1Fragment.addClickAction {
+            /**
+             * popBackStack() 如果当前的返回栈是空的就会报错，因为栈是空的了
+             * 但可以跨级返回
+             */
+            Navigation.findNavController(view).popBackStack(R.id.menu2_fragment, false)
+//            Navigation.findNavController(view).navigateUp()
+        }
     }
 
 
