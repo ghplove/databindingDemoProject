@@ -34,20 +34,20 @@ abstract class BaseViewAdapter: RecyclerView.Adapter<AdapterBindingViewHolder<*>
     }
 
 
-    companion object {
-        @BindingAdapter("android:onItemClick")
-        @JvmStatic
-        fun setUpAdapter(recyclerView: RecyclerView, onItemClickListener: OnItemClickListener) {
-            var adapter: BaseViewAdapter = (recyclerView.adapter ?: return) as? BaseViewAdapter ?: return
-            Log.i("onItemClickListener", "BindingAdapter setUpAdapter")
-            adapter.mListener = object : OnItemClickListener{
-                override fun onItemClick(adapter: BaseViewAdapter, model: Any, position: Int) {
-                    Log.i("onItemClickListener", "BindingAdapter onItemClick")
-                    onItemClickListener.onItemClick(adapter, model, position)
-                }
-            }
-        }
-    }
+//    companion object {
+//        @BindingAdapter("android:onItemClick")
+//        @JvmStatic
+//        fun setUpAdapter(recyclerView: RecyclerView, onItemClickListener: OnItemClickListener) {
+//            var adapter: BaseViewAdapter = (recyclerView.adapter ?: return) as? BaseViewAdapter ?: return
+//            Log.i("onItemClickListener", "BindingAdapter setUpAdapter")
+//            adapter.mListener = object : OnItemClickListener{
+//                override fun onItemClick(adapter: BaseViewAdapter, model: Any, position: Int) {
+//                    Log.i("onItemClickListener", "BindingAdapter onItemClick")
+//                    onItemClickListener.onItemClick(adapter, model, position)
+//                }
+//            }
+//        }
+//    }
 
     interface OnItemClickListener {
         fun onItemClick(adapter: BaseViewAdapter, model: kotlin.Any, position: Int)

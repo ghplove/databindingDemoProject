@@ -24,11 +24,11 @@ class RecyclerViewActivity : Activity() {
 
         binding.presenter = Presenter()
 
-//        recyclerViewAdapter?.mListener = object : BaseViewAdapter.OnItemClickListener<Any> {
-//            override fun onItemClick(adapter: BaseViewAdapter, model: Any, position: Int) {
-//                Toast.makeText(this@RecyclerViewActivity, (model as BookModel).bookName, Toast.LENGTH_SHORT).show()
-//            }
-//        }
+        recyclerViewAdapter?.mListener = object : BaseViewAdapter.OnItemClickListener {
+            override fun onItemClick(adapter: BaseViewAdapter, model: Any, position: Int) {
+                Toast.makeText(this@RecyclerViewActivity, (model as BookModel).bookName, Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     class Presenter {

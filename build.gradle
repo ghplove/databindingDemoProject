@@ -38,27 +38,27 @@ buildscript {
     }
 }
 
-plugins {
-    id "com.diffplug.gradle.spotless" version "3.14.0"
-}
+//plugins {
+//    id "com.diffplug.gradle.spotless" version "3.14.0"
+//}
 
 allprojects {
     repositories {
         mavenLocal()
         google()
         jcenter()
-//        maven { url 'https://maven.google.com' }
+        maven { url 'https://maven.google.com' }
         maven { url 'https://jitpack.io' }
     }
 }
 
-//task clean(type: Delete) {
-//    delete rootProject.buildDir
-//}
-spotless {
-    kotlin {
-        target "**/*.kt"
-        ktlint(ktlintVersion)
-    }
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
+//spotless {
+//    kotlin {
+//        target "**/*.kt"
+//        ktlint(ktlintVersion)
+//    }
+//}
 

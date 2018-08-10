@@ -12,8 +12,8 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:onItemClick="@{presenter::onClick}"
         >
+        <!--android:onItemClick="@{presenter::onClick}"-->
 
     </android.support.v7.widget.RecyclerView>
 </layout>

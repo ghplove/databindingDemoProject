@@ -24,12 +24,12 @@
             android:layout_height="50dp"
             android:text="@={viewModel.name}"
             />
-        <com.ghp.demo.databindingdemoproject.view.TestEditText
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:text="@={viewModel.name}"
-            app:bindingMethodToast="@{viewModel.name}"
-            />
+        <!--<com.ghp.demo.databindingdemoproject.view.TestEditText-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:text="@={viewModel.name}"-->
+            <!--app:bindingMethodToast="@{viewModel.name}"-->
+            <!--/>-->
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
