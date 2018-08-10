@@ -12,12 +12,12 @@ import com.ghp.demo.databindingdemoproject.viewModel.viewmodel.ShareViewModel
 class TestViewModelActivity : AppCompatActivity() {
     var binding: ActivityTestViewModelBinding? = null
     var viewModel: ShareViewModel? = null
-    var test1Fragment: Test1Fragment? = null
+    var test1Fragment: ViewModelTest1Fragment? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_test_view_model)
         viewModel = ViewModelProviders.of(this).get(ShareViewModel::class.java)
-        test1Fragment = Test1Fragment()
+        test1Fragment = ViewModelTest1Fragment()
         addFragment(test1Fragment!!)
     }
 

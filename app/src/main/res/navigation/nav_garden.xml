@@ -2,19 +2,44 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@+id/binding_fragment"
+    app:startDestination="@+id/menu1_fragment"
     android:id="@+id/nav_garden">
+    <!--<activity android:id="@+id/binding_activity"-->
+        <!--android:name="com.ghp.demo.databindingdemoproject.viewModel.ui.ViewModelTest1Fragment1Fragment"-->
+        <!--android:label="@string/app_name"-->
+        <!--tools:layout="@layout/activity_binding"-->
+        <!--/>-->
     <fragment
-        android:id="@+id/binding_fragment"
-        android:name="com.ghp.demo.databindingdemoproject.navigation.DataBindingFragment"
-        android:label="@string/binding_title"
-        tools:layout="@layout/fragment_data_binding"/>
+        android:id="@+id/menu1_fragment"
+        android:name="com.ghp.demo.databindingdemoproject.navigation.Menu1Fragment"
+        android:label="@string/menu1_title"
+        tools:layout="@layout/fragment_menu1"/>
     <fragment
-        android:id="@+id/livedata_fragment"
-        android:name="com.ghp.demo.databindingdemoproject.navigation.LiveDataFragment"
-        android:label="@string/livedata_title"
-        tools:layout="@layout/fragment_live_data">
+        android:id="@+id/menu2_fragment"
+        android:name="com.ghp.demo.databindingdemoproject.navigation.Menu2Fragment"
+        android:label="@string/menu2_title"
+        tools:layout="@layout/fragment_menu2">
 
+        <action android:id="@+id/action_livedata_fragment_to_livedata2_fragment"
+            app:destination="@id/menu2_next_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="test"
+            android:defaultValue="@string/menu2next_args"
+            app:argType="string"/>
+        <argument
+            android:name="num"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
+
+    <fragment
+        android:id="@+id/menu2_next_fragment"
+        android:name="com.ghp.demo.databindingdemoproject.navigation.Menu2NextFragment"
+        android:label="@string/menu2next_title"
+        tools:layout="@layout/fragment_menu2_next"/>
 
 </navigation>

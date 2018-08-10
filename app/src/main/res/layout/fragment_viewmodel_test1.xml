@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
     <data>
 
     </data>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".viewModel.ui.Test2Fragment">
+        tools:context=".viewModel.ui.ViewModelTest1Fragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="test ViewModel shareData2" />
+                android:text="test ViewModel shareData1" />
 
             <TextView
                 android:id="@+id/test_textview"
@@ -32,8 +32,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_10dp"
                 android:text="test viewmodel sharedata"/>
+
+            <Button
+                android:id="@+id/replace_fragment_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="raplace_fragment"/>
         </LinearLayout>
 
     </FrameLayout>
 </layout>
-

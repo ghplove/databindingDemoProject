@@ -11,7 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.ghp.demo.databindingdemoproject.R
-import com.ghp.demo.databindingdemoproject.databinding.FragmentTest2Binding
+import com.ghp.demo.databindingdemoproject.databinding.FragmentViewmodelTest2Binding
 import com.ghp.demo.databindingdemoproject.extension.addClickAction
 import com.ghp.demo.databindingdemoproject.testmodel.UserModel
 import com.ghp.demo.databindingdemoproject.viewModel.viewmodel.ShareViewModel
@@ -20,9 +20,9 @@ import com.ghp.demo.databindingdemoproject.viewModel.viewmodel.ShareViewModel
  * A simple [Fragment] subclass.
  *
  */
-class Test2Fragment : Fragment() {
+class ViewModelTest2Fragment : Fragment() {
 
-    var binding: FragmentTest2Binding? = null
+    var binding: FragmentViewmodelTest2Binding? = null
     var model: ShareViewModel? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +34,7 @@ class Test2Fragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_test2, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_viewmodel_test2, container, false)
         binding?.testViewmodelSharedataBtn?.addClickAction {
             var user: UserModel = model?.selected?.value?: UserModel()
             user.userName = "viewModelTest"

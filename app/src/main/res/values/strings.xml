@@ -16,6 +16,9 @@
     <string name="nameFormat">%s, %s</string>
     <string name="navigation_drawer_header_content_description">导航抽屉页眉</string>
     <string name="navigation_drawer_header_title">Navigation</string>
-    <string name="binding_title">DataBinding</string>
-    <string name="livedata_title">LiveData</string>
+    <string name="menu1_title">Menu1</string>
+    <string name="menu2_title">Menu2</string>
+    <string name="menu2next_title">Menu2_next</string>
+    <string name="menu2next_args">这是从Menu2传递的参数</string>
+
 </resources>

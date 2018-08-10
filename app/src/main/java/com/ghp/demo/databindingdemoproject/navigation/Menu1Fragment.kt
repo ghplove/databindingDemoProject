@@ -14,12 +14,12 @@ import com.ghp.demo.databindingdemoproject.R
  * A simple [Fragment] subclass.
  *
  */
-class DataBindingFragment : Fragment() {
+class Menu1Fragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_data_binding, container, false)
+        return inflater.inflate(R.layout.fragment_menu1, container, false)
     }
 
 
