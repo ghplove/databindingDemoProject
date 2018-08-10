@@ -10,4 +10,8 @@
     <dimen name="dimen_8dp">8dp</dimen>
     <dimen name="dimen_9dp">9dp</dimen>
     <dimen name="dimen_10dp">10dp</dimen>
+
+    <dimen name="navigation_drawer_header_height">192dp</dimen>
+    <dimen name="navigation_drawer_header_padding">16dp</dimen>
+    <dimen name="navigation_drawer_image_width">100dp</dimen>
 </resources>

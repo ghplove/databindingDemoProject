@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/binding_fragment"
+        android:title="@string/binding_title"/>
+    <item
+        android:id="@+id/livedata_fragment"
+        android:title="@string/livedata_title"/>
+</menu>

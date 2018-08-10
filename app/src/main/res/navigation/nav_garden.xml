@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/binding_fragment"
     android:id="@+id/nav_garden">
+    <fragment
+        android:id="@+id/binding_fragment"
+        android:name="com.ghp.demo.databindingdemoproject.navigation.DataBindingFragment"
+        android:label="@string/binding_title"
+        tools:layout="@layout/fragment_data_binding"/>
+    <fragment
+        android:id="@+id/livedata_fragment"
+        android:name="com.ghp.demo.databindingdemoproject.navigation.LiveDataFragment"
+        android:label="@string/livedata_title"
+        tools:layout="@layout/fragment_live_data">
+
+    </fragment>
 
 </navigation>

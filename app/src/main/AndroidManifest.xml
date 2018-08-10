@@ -26,7 +26,9 @@
         <activity android:name=".binding.ui.RecyclerViewActivity" />
         <activity android:name=".livedata.ui.LiveData2Activity" />
         <activity android:name=".viewModel.ui.TestViewModelActivity" />
-        <activity android:name=".navigation.NavigationMainActivity"></activity>
+        <activity
+            android:name=".navigation.NavigationMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

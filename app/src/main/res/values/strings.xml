@@ -14,7 +14,8 @@
     <string name="viewmodel_activity_label_text">Uses a ViewModel to hold data and handle user actions, using better alternatives</string>
     <string name="see_readme">See README.md for details</string>
     <string name="nameFormat">%s, %s</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_header_content_description">导航抽屉页眉</string>
+    <string name="navigation_drawer_header_title">Navigation</string>
+    <string name="binding_title">DataBinding</string>
+    <string name="livedata_title">LiveData</string>
 </resources>
