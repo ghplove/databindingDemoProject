@@ -35,6 +35,7 @@ android {
 
 repositories {
     mavenCentral()
+    google()
 }
 
 dependencies {
@@ -76,5 +77,5 @@ dependencies {
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
 
     implementation "com.jakewharton.rxbinding2:rxbinding:$rootProject.rxbindingVersion"
-
+    implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
 }
