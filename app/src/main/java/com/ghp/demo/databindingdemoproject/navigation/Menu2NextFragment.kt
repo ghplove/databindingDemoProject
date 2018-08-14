@@ -41,7 +41,7 @@ class Menu2NextFragment : Fragment() {
              * 但可以跨级返回
              */
             Navigation.findNavController(view).popBackStack(R.id.menu2_fragment, false)
-//            Navigation.findNavController(view).navigateUp()
+            Navigation.findNavController(view).navigateUp()
         }
     }
 

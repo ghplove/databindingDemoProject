@@ -9,6 +9,7 @@ import com.ghp.demo.databindingdemoproject.extension.routeToActivity
 import com.ghp.demo.databindingdemoproject.livedata.ui.LiveDataActivity
 import com.ghp.demo.databindingdemoproject.binding.ui.BindingActivity
 import com.ghp.demo.databindingdemoproject.lifecycles.ui.LifeCyclesActivity
+import com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.BottomNavigationActivity
 import com.ghp.demo.databindingdemoproject.navigation.NavigationMainActivity
 import com.ghp.demo.databindingdemoproject.viewModel.ui.TestViewModelActivity
 
@@ -37,6 +38,9 @@ class StartActivity : AppCompatActivity() {
 
         binding.goTestNavigationPage.addClickAction {
             routeToActivity(NavigationMainActivity::class.java)
+        }
+        binding.goBottomNavigationPage.addClickAction {
+            routeToActivity(BottomNavigationActivity::class.java)
         }
     }
 }

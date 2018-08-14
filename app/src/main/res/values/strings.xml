@@ -20,5 +20,11 @@
     <string name="menu2_title">Menu2</string>
     <string name="menu2next_title">Menu2_next</string>
     <string name="menu2next_args">这是从Menu2传递的参数</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

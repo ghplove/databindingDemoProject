@@ -16,6 +16,7 @@ android {
 //        jackOptions.enabled = true
         vectorDrawables.useSupportLibrary true
 
+
     }
     buildTypes {
         release {
@@ -45,6 +46,9 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
     implementation "com.android.support:design:$rootProject.supportLibraryVersion"
     //room
+//    implementation 'com.google.android.material:material:1.0.0-beta01'
+//    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+//    implementation 'androidx.vectordrawable:vectordrawable:1.0.0-beta01'
     kapt "android.arch.persistence.room:compiler:$rootProject.roomVersion"
     implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
     //glide

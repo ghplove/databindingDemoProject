@@ -48,6 +48,13 @@
             android:text="NavigationPage!"
             android:padding="@dimen/dimen_10dp"
             />
+        <TextView
+            android:id="@+id/go_BottomNavigation_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BottomNavigationPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
 
     </LinearLayout>
 </layout>

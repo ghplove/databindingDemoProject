@@ -28,7 +28,8 @@
         <activity android:name=".viewModel.ui.TestViewModelActivity" />
         <activity
             android:name=".navigation.NavigationMainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".navigation.bottomNavigationView.BottomNavigationActivity" />
     </application>
 
 </manifest>
