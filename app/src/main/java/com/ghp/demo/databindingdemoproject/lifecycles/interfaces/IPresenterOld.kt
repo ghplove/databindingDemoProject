@@ -1,4 +1,4 @@
-package com.ghp.demo.lifecycles.interfaces
+package com.ghp.demo.databindingdemoproject.lifecycles.interfaces
 
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleObserver

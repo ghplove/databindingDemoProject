@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".binding.ui.BindingActivity" />
-        <activity android:name="com.ghp.demo.lifecycles.ui.LifeCyclesActivity" />
+        <activity android:name=".lifecycles.ui.LifeCyclesActivity" />
         <activity android:name=".binding.ui.ObservableFieldActivity" />
         <activity android:name=".binding.ui.ViewModelActivity" />
         <activity android:name=".livedata.ui.LiveDataActivity" />

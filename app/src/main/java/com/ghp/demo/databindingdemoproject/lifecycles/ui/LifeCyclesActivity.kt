@@ -1,4 +1,4 @@
-package com.ghp.demo.lifecycles.ui
+package com.ghp.demo.databindingdemoproject.lifecycles.ui
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.ghp.demo.databindingdemoproject.R
 import com.ghp.demo.databindingdemoproject.databinding.ActivityLifeCyclesBinding
-import com.ghp.demo.lifecycles.interfaces.IPresenter
-import com.ghp.demo.lifecycles.interfaces.MainPresenter
+import com.ghp.demo.databindingdemoproject.lifecycles.interfaces.IPresenter
+import com.ghp.demo.databindingdemoproject.lifecycles.interfaces.MainPresenter
 
 class LifeCyclesActivity : AppCompatActivity() {
     val TAG = "LifeCyclesActivity"

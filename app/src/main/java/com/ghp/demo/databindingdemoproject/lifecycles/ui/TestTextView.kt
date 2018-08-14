@@ -5,7 +5,7 @@ import android.arch.lifecycle.LifecycleOwner
 import android.content.Context
 import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
-import com.ghp.demo.lifecycles.interfaces.IPresenter
+import com.ghp.demo.databindingdemoproject.lifecycles.interfaces.IPresenter
 
 class TestTextView : AppCompatTextView, IPresenter {
 

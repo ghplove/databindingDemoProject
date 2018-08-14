@@ -8,9 +8,9 @@ import com.ghp.demo.databindingdemoproject.extension.addClickAction
 import com.ghp.demo.databindingdemoproject.extension.routeToActivity
 import com.ghp.demo.databindingdemoproject.livedata.ui.LiveDataActivity
 import com.ghp.demo.databindingdemoproject.binding.ui.BindingActivity
+import com.ghp.demo.databindingdemoproject.lifecycles.ui.LifeCyclesActivity
 import com.ghp.demo.databindingdemoproject.navigation.NavigationMainActivity
 import com.ghp.demo.databindingdemoproject.viewModel.ui.TestViewModelActivity
-import com.ghp.demo.lifecycles.ui.LifeCyclesActivity
 
 class StartActivity : AppCompatActivity() {
 
