@@ -16,7 +16,7 @@
             name="showImage"
             type="boolean"/>
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".binding.ui.ObservableFieldActivity">
@@ -79,6 +79,6 @@
             app:layout_constraintTop_toBottomOf="@+id/change_imgurl_button"
             tools:ignore="MissingConstraints" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 </layout>
 

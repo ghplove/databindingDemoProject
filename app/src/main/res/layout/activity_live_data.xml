@@ -8,7 +8,7 @@
             name="viewModel"
             type="com.ghp.demo.databindingdemoproject.livedata.viewmodel.NameViewModel"/>
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".databindingdemoproject.livedata.ui.LiveDataActivity">
@@ -95,6 +95,6 @@
                 />
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 
 </layout>
