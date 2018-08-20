@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import com.ghp.demo.databindingdemoproject.R
 import com.ghp.demo.databindingdemoproject.databinding.ActivityBindingBinding
 import com.ghp.demo.databindingdemoproject.extension.addClickAction
-import com.ghp.demo.databindingdemoproject.extension.routeToActivity
+import com.tools.ghp.library.routeToActivity
 
 class BindingActivity : AppCompatActivity() {
 

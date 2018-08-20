@@ -1,4 +1,4 @@
-package com.ghp.demo.databindingdemoproject.extension
+package com.tools.ghp.library
 
 import android.content.Intent
 import android.os.Bundle

@@ -4,7 +4,10 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.navigation.NavController
+import androidx.navigation.NavDestination
+import androidx.navigation.NavGraph
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
@@ -25,6 +28,12 @@ class NavigationMainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
 //        var navHostFragment: NavHostFragment = supportFragmentManager.findFragmentById(R.id.garden_nav_fragment) as NavHostFragment
+//        var navSimple: NavGraph = navHostFragment.navController.navInflater.inflate(R.navigation.nav_garden)
+//        var menu2FragDestination: NavDestination = navSimple.findNode(R.id.menu2_fragment)
+//        var menu2FragmentArgs: Menu2FragmentArgs = Menu2FragmentArgs.fromBundle(bundleOf("test" to getString(R.string.menu2next_args), "num" to 9))
+//        menu2FragDestination.setDefaultArguments(menu2FragmentArgs.toBundle())
+//        navHostFragment.navController.graph = navSimple
+
 //        navController = navHostFragment.navController
 //        NavigationUI.setupActionBarWithNavController(this, navController)
 

@@ -13,8 +13,8 @@ import com.ghp.demo.databindingdemoproject.testmodel.UserModel
 import android.arch.lifecycle.Transformations
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.Observer
-import com.ghp.demo.databindingdemoproject.extension.routeToActivity
 import com.ghp.demo.databindingdemoproject.livedata.service.LiveDataService
+import com.tools.ghp.library.routeToActivity
 
 
 class LiveDataActivity : AppCompatActivity() {

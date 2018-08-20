@@ -5,13 +5,13 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.ghp.demo.databindingdemoproject.databinding.ActivityStartBinding
 import com.ghp.demo.databindingdemoproject.extension.addClickAction
-import com.ghp.demo.databindingdemoproject.extension.routeToActivity
 import com.ghp.demo.databindingdemoproject.livedata.ui.LiveDataActivity
 import com.ghp.demo.databindingdemoproject.binding.ui.BindingActivity
 import com.ghp.demo.databindingdemoproject.lifecycles.ui.LifeCyclesActivity
 import com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.BottomNavigationActivity
 import com.ghp.demo.databindingdemoproject.navigation.NavigationMainActivity
 import com.ghp.demo.databindingdemoproject.viewModel.ui.TestViewModelActivity
+import com.tools.ghp.library.routeToActivity
 
 class StartActivity : AppCompatActivity() {
 

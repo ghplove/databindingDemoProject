@@ -81,4 +81,5 @@ dependencies {
 
     implementation "android.arch.work:work-runtime-ktx:$rootProject.workVersion"
     implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
+    implementation project(':library')
 }
