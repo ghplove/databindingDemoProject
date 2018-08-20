@@ -16,7 +16,7 @@ buildscript {
         junitVersion = '4.12'
         lifecycleVersion = '1.1.1'
         navigationVersion = '1.0.0-alpha04'
-        kotlinVersion = '1.2.51'
+        kotlinVersion = '1.2.61'
         ktlintVersion = '0.24.0'
         roomVersion = '1.1.1'
         runnerVersion = '1.0.1'
@@ -37,6 +37,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
