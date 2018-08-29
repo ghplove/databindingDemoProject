@@ -10,8 +10,11 @@ import com.ghp.demo.databindingdemoproject.binding.ui.BindingActivity
 import com.ghp.demo.databindingdemoproject.lifecycles.ui.LifeCyclesActivity
 import com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.BottomNavigationActivity
 import com.ghp.demo.databindingdemoproject.navigation.NavigationMainActivity
+import com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.BtNavShiftingActivity
+import com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.BtNavTransactionActivity
 import com.ghp.demo.databindingdemoproject.viewModel.ui.TestViewModelActivity
 import com.tools.ghp.library.routeToActivity
+import kotlinx.android.synthetic.main.activity_start.*
 
 class StartActivity : AppCompatActivity() {
 
@@ -41,6 +44,12 @@ class StartActivity : AppCompatActivity() {
         }
         binding.goBottomNavigationPage.addClickAction {
             routeToActivity(BottomNavigationActivity::class.java)
+        }
+        go_BtNavShifting_page.addClickAction {
+            routeToActivity(BtNavShiftingActivity::class.java)
+        }
+        go_BtNavTransaction_page.addClickAction {
+            routeToActivity(BtNavTransactionActivity::class.java)
         }
     }
 }

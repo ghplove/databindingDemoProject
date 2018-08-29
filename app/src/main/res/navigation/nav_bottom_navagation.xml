@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/nav_home"
     android:id="@+id/nav_bottom_navagation">
-    <fragment
+    <tab_fragment
         android:id="@+id/nav_home"
         android:name="com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
-    </fragment>
-    <fragment
+    </tab_fragment>
+    <tab_fragment
         android:id="@+id/nav_dashboard"
         android:name="com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard">
-    </fragment>
-    <fragment
+    </tab_fragment>
+    <tab_fragment
         android:id="@+id/nav_notifications"
         android:name="com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications">
-    </fragment>
+    </tab_fragment>
 </navigation>

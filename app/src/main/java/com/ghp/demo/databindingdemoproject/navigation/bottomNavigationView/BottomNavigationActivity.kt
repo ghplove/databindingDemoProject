@@ -33,8 +33,8 @@ class BottomNavigationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bottom_navigation)
-
-        var navHostFragment: NavHostFragment = supportFragmentManager.findFragmentById(R.id.frag_nav_bottom_navigation) as NavHostFragment
+        //使用自定义的TabNavHostFragment，优化fragment每次重新create问题
+        var navHostFragment: TabNavHostFragment = supportFragmentManager.findFragmentById(R.id.frag_nav_bottom_navigation) as TabNavHostFragment
         var navController: NavController = navHostFragment.navController
         NavigationUI.setupWithNavController(navigation, navController)
 //        bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)

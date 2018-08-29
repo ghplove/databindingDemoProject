@@ -55,6 +55,20 @@
             android:text="BottomNavigationPage!"
             android:padding="@dimen/dimen_10dp"
             />
+        <TextView
+            android:id="@+id/go_BtNavShifting_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BtNavShiftingPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
+        <TextView
+            android:id="@+id/go_BtNavTransaction_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BtNavTransactionPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
 
     </LinearLayout>
 </layout>

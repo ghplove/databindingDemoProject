@@ -30,6 +30,8 @@
             android:name=".navigation.NavigationMainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".navigation.bottomNavigationView.BottomNavigationActivity" />
+        <activity android:name=".navigation.bottomNavigationView.BtNavShiftingActivity" />
+        <activity android:name=".navigation.bottomNavigationView.BtNavTransactionActivity" />
     </application>
 
 </manifest>
