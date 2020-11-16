@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ghp.demo.databindingdemoproject.binding.viewmodel.ProfileObservableViewModel"/>
+
+        <import type="android.graphics.Bitmap"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".binding.ui.ViewModelActivity">
+        <!--双向绑定的写法： @={} -->
+        <!--自定义view的话，需要通过InverseBindingAdapter注解类实现-->
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="@={viewModel.name}"
+            />
+        <!--<com.ghp.demo.databindingdemoproject.view.TestEditText-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:text="@={viewModel.name}"-->
+            <!--app:bindingMethodToast="@{viewModel.name}"-->
+            <!--/>-->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.name ?? viewModel.lastName}"
+            />
+
+        <TextView
+            android:id="@+id/name_test_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/nameFormat(viewModel.name, viewModel.lastName)}"
+            />
+        <TextView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(viewModel.likes)}"
+            />
+        <Button
+            android:id="@+id/click_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:onClick="@{() -> viewModel.onClick()}"
+            android:text="click"
+            />
+        <Button
+            android:id="@+id/click_name_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:onClick="@{() -> viewModel.onClickName()}"
+            android:text="click change name"
+            />
+        <TextView
+            android:id="@+id/bindalbe_test_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.bindalbeTestModel.testStr}"
+            />
+        <Button
+            android:id="@+id/bindalbe_test_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:onClick="@{() -> viewModel.onClickBindalbeTest()}"
+            android:text="click bindalbe test"
+            />
+        <TextView
+            android:id="@+id/observableField_user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.user.userName}"
+            />
+        <Button
+            android:id="@+id/ObservableField_test_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:onClick="@{() -> viewModel.onclickObservableFieldUser()}"
+            android:text="click onclickObservableFieldUser test"
+            />
+        <View
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:background="@{viewModel.isRed()? @drawable/ic_launcher_background:@drawable/ic_launcher_background}" />
+    </LinearLayout>
+</layout>

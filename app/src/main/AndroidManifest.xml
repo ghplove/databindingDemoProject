@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ghp.demo.databindingdemoproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".binding.ui.BindingActivity" />
+        <activity android:name=".lifecycles.ui.LifeCyclesActivity" />
+        <activity android:name=".binding.ui.ObservableFieldActivity" />
+        <activity android:name=".binding.ui.ViewModelActivity" />
+        <activity android:name=".livedata.ui.LiveDataActivity" />
+        <activity android:name=".binding.ui.RecyclerViewActivity" />
+        <activity android:name=".livedata.ui.LiveData2Activity" />
+        <activity android:name=".viewModel.ui.TestViewModelActivity" />
+        <activity
+            android:name=".navigation.NavigationMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".navigation.bottomNavigationView.BottomNavigationActivity" />
+        <activity android:name=".navigation.bottomNavigationView.BtNavShiftingActivity" />
+        <activity android:name=".navigation.bottomNavigationView.BtNavTransactionActivity" />
+    </application>
+
+</manifest>

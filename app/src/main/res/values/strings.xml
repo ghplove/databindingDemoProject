@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">DemoProject</string>
+    <string name="likes">Likes</string>
+    <string name="textview">TextView</string>
+    <string name="profile_name">NAME</string>
+    <string name="profile_lastname">LAST NAME</string>
+    <string name="last_name_label">Last name</string>
+    <string name="name_label">Name</string>
+    <string name="profile_avatar_cd">Profile\'s avatar</string>
+    <string name="like">Like</string>
+    <string name="observable_fields_activity_text">Observable Fields activity</string>
+    <string name="viewmodel_activity_text">ViewModel activity</string>
+    <string name="observableactivity_activity_label_text">Uses ObservableFields to automatically refresh the UI and showcases common bad practices</string>
+    <string name="viewmodel_activity_label_text">Uses a ViewModel to hold data and handle user actions, using better alternatives</string>
+    <string name="see_readme">See README.md for details</string>
+    <string name="nameFormat">%s, %s</string>
+    <string name="navigation_drawer_header_content_description">导航抽屉页眉</string>
+    <string name="navigation_drawer_header_title">Navigation</string>
+    <string name="menu1_title">Menu1</string>
+    <string name="menu2_title">Menu2</string>
+    <string name="menu2next_title">Menu2_next</string>
+    <string name="menu2next_args">这是从Menu2传递的参数</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_test">Test</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bt_nav_shifting_mode">BtNavShiftingModeActivity</string>
+
+</resources>

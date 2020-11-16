@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_home"
+    android:id="@+id/nav_bottom_navagation">
+    <tab_fragment
+        android:id="@+id/nav_home"
+        android:name="com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+    </tab_fragment>
+    <tab_fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+    </tab_fragment>
+    <tab_fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.ghp.demo.databindingdemoproject.navigation.bottomNavigationView.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications">
+    </tab_fragment>
+</navigation>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".StartActivity"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/go_binding_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dataBindingPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
+
+        <TextView
+            android:id="@+id/go_lifecycles_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LifeCyclesPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
+        <TextView
+            android:id="@+id/go_livedata_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LiveDataPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
+        <TextView
+            android:id="@+id/go_test_viewModel_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TestViewModelPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
+        <TextView
+            android:id="@+id/go_test_navigation_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NavigationPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
+        <TextView
+            android:id="@+id/go_BottomNavigation_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BottomNavigationPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
+        <TextView
+            android:id="@+id/go_BtNavShifting_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BtNavShiftingPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
+        <TextView
+            android:id="@+id/go_BtNavTransaction_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BtNavTransactionPage!"
+            android:padding="@dimen/dimen_10dp"
+            />
+
+    </LinearLayout>
+</layout>

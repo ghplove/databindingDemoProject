@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.ghp.demo.databindingdemoproject.R"/>
+        <import type="android.view.View"/>
+        <variable
+            name="user"
+            type="com.ghp.demo.databindingdemoproject.binding.data.ObservableFieldProfile"/>
+        <variable
+            name="presenter"
+            type="com.ghp.demo.databindingdemoproject.binding.ui.ObservableFieldActivity.Presenter"/>
+
+        <variable
+            name="showImage"
+            type="boolean"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".binding.ui.ObservableFieldActivity">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(user.likes)}"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <Button
+            android:id="@+id/click_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter::onClick}"
+            android:text="click"
+            app:layout_constraintTop_toBottomOf="@+id/like"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="@{showImage ? View.VISIBLE : View.GONE}"
+            app:imageUrl="@{user.userPhotoUrl}"
+            app:placeholder="@{@drawable/ic_launcher_background}"
+            app:layout_constraintTop_toBottomOf="@+id/click_button"
+            tools:ignore="MissingConstraints" />
+        <CheckBox
+            android:id="@+id/showimg_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onCheckedChanged="@{presenter::onCheckChanged}"
+            android:text="showImage"
+            app:layout_constraintTop_toBottomOf="@+id/img"
+            tools:ignore="MissingConstraints" />
+        <Button
+            android:id="@+id/change_imgurl_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter::onChangeImgUrl}"
+            android:text="change img url"
+            app:layout_constraintTop_toBottomOf="@+id/showimg_checkbox"
+            tools:ignore="MissingConstraints" />
+        <Button
+            android:id="@+id/change_imgurl_null_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{presenter::onChangeImgNullUrl}"
+            android:text="change img url null"
+            app:layout_constraintTop_toBottomOf="@+id/change_imgurl_button"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
